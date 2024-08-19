@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        hello world!
+    </title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+</head>
+
+<body>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous">
+        </script>
+    <!-- スクリプトは閉じたほうが見やすい -->
+
+    <script>
+        console.log('hello world!');
+        $(window).on('load', function () {
+            console.log('hello world!')
+        });
+        // windowというjavasprictのオブジェクトをJクエリのオブジェクトに変換する（なぜならjavasprictが原始的なやり方で最小限の機能にとどまっているから）
+        // windowというクラスの中のonメソッドはwindowがloadし終わった時がイベントの開始時
+        // 変換したオブジェクトを.onでオブジェクトのonというメソッドを呼び出している。
+        // onメソッド＝1個目の引数で指定したイベントにリスナーを登録する（function）で引き渡す。
+        // function＝定義した関数そのものをオブジェクトとして返してくれる
+        $(document).ready(function () {
+            console.log('hello world!');
+            $('#helloButton').click(function () {
+                console.log('はろー');
+            });
+            // #はCSSセレクター。htmlで書いてある要素を探すためのもの。cssからjavascriptに流用。
+            // #はid探しの目印。
+            $('#helloButton').click(function () {
+                $('#modal').modal('show');
+            });
+            // $('#modal').modal('show');//要素がreadyしたらそのままニュッと現れる←こぐれのメモ
+        })
+        //    ドキュメントがレディする
+        // 画像が読み込まれてなくても、要素が読み込まれていたら出てくる
+        // loadは短い時間のほうがいい。画像の読み込みは後でもいいよね。
+        // 昔のテーブルタグみたいな感じ。全読みしてから表示するか、その周りだけ読み込んで先に文字とか軽いものを表示するか。
+        // readyのほうが主流
+
+
+
+    </script>
+    <button id="helloButton" class="btn btn-outline-info">
+        はろー
+    </button>
+    <!-- Button trigger modal -->
+    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#helloModal">
+        <!-- 
+        data-bs-toggle:トグルする。内容としてはモーダルの表示非表示。初回はモーダルの表示となる。bsはBootstrapのことだと思われる。
+        ※htmlの属性の名前を自分たちで付ける場合は文頭に「data」が必要。提供されている属性は「data」がついている。
+        data-bs-target:どのモーダルを指定したいのか？（モーダル側のidを指定する）
+         -->
+        Launch demo modal
+    </button>
+
+    hello world////<br />
+
+    <div class="container border" >
+        <div class="row border">
+            <div class="col border">
+                1 of <br> 2
+            </div>
+            <div class="col border">
+                2 of 2
+            </div>
+        </div>
+        <div class="row border">
+            <div class="col border">
+                1 of 3
+            </div>
+            <div class="col border">
+                2 of 3
+            </div>
+            <div class="col border">
+                3 of 3
+            </div>
+        </div>
+    </div>
+    <!-- 印刷業界では横12マスがデフォルト。横12マスを横2マスや横3マスに見えるようにしてくれている
+     単純にcolだと自動計算をしてくれる。
+     col-1だと左1マス。
+     col-1を二つ並べると、左寄せでカラムが表示される（自動表示の2つと見え方が違う）＝col-10分右が開く -->
+
+    <div class="modal" tabindex="-1" id="helloModal">
+        <!-- modalは、実は最初から出てるけど、透明になってるんだぜ～ 
+         自分のつけた名前＋部品の名前（部品名の始まりは大文字で）-->
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">もーだる</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    <!-- 自分で書かなくても、Bootstrapが用意してくれたhtml属性を使っているポイント(data-bs-dismiss="modal") -->
+                </div>
+                <div class="modal-body">
+                    <p>もーだる　が　あらわれた</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">とじる</button>
+                    <!-- 自分で書かなくても、Bootstrapが用意してくれたhtml属性を使っているポイント(data-bs-dismiss="modal")
+                    data-bs-dismiss="modal"は、class=modal　←自分自身　を閉じる働きをしてくれている。 -->
+                    <button type="button" class="btn btn-primary">なにも　おきない　！</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ↓　Bootstrapを入れれば、Bootstrapで定義されていることはhtml内にjqueryでわざわざ書かなくても、処理してくれる。 -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous">
+        </script>
+
+
+</body>
+
+</html>

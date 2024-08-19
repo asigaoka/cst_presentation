@@ -1,0 +1,14 @@
+.text-cstblue {
+    color: #008fb9;
+}
+
+.small-image {
+    width: 2rem;
+    height: 2rem;
+    object-fit: cover;
+}
+
+.text-ceo {
+    text-align: right;
+    font-family: HGP行書体;
+}
