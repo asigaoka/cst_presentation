@@ -2,13 +2,33 @@
     color: #008fb9;
 }
 
+.text-ceo {
+    text-align: right;
+    font-family: HGP行書体;
+}
+
 .small-image {
     width: 2rem;
     height: 2rem;
     object-fit: cover;
 }
 
-.text-ceo {
-    text-align: right;
-    font-family: HGP行書体;
+body {
+    scroll-snap-type: y mandatory;
+}
+
+.scroll-container {
+    height: 100vh;
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
+    scroll-behavior: smooth;
+}
+
+.scroll-container section {
+    scroll-snap-align: center;
+    height: 100vh;
+}
+
+.scroll-container::-webkit-scrollbar {
+    display: none; /* スクロールバーを非表示にする */
 }
