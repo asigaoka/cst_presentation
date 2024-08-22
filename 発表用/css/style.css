@@ -13,10 +13,6 @@
     object-fit: cover;
 }
 
-body {
-    scroll-snap-type: y mandatory;
-}
-
 .scroll-container {
     height: 100vh;
     overflow-y: scroll;
