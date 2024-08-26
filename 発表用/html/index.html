@@ -14,6 +14,11 @@
 </head>
 
 <body>
+    <!-- 背景動画 -->
+    <video class="video-background" autoplay muted loop>
+        <source src="../../background.mp4" type="video/mp4">
+    </video>
+
     <!-- オリジナルクラスscroll-container作成、ブラウザ全画面表示、スペースキーを押すたびにsectionタグごとのスクロール -->
     <div class="scroll-container vh-100">
         <!-- index -->
@@ -423,8 +428,14 @@
                 </div>
             </div>
         </section>
-    </div>
 
+        <!-- thankyou -->
+        <section class="d-flex vh-100 justify-content-center align-items-center">
+            <div class="display-3">
+                ご清聴ありがとうございました
+            </div>
+        </section>
+    </div>
 
     <!-- jQueryのコード -->
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"
