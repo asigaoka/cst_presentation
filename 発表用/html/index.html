@@ -14,6 +14,11 @@
 </head>
 
 <body>
+    <!-- 背景動画 -->
+    <video class="video-background" autoplay muted loop>
+        <source src="../../background.mp4" type="video/mp4">
+    </video>
+
     <!-- オリジナルクラスscroll-container作成、ブラウザ全画面表示、スペースキーを押すたびにsectionタグごとのスクロール -->
     <div class="scroll-container vh-100">
         <!-- index -->
@@ -179,7 +184,7 @@
                     </div>
                 </div>
                 <!-- syainのボタンが並んでいるrow ここまで -->
-                 
+
             </div>
             <!-- 上下左右から出てくるオフキャンバス管理 -->
             <!-- 上 -->
@@ -233,8 +238,29 @@
                             </div>
                             <div class="col-auto">
                                 <div class="offcanvas-body lead">
-                                    A葉さんの紹介
-                                    口癖「○○的の考えだと」
+                                    <ul>
+                                        <li>
+                                            開発部隊の一人（ヘビースモーカー）
+                                        </li>
+                                        <li>
+                                            温厚・活発な雰囲気で、親しみやすい。
+                                        </li>
+                                        <li>
+                                            タバコ休憩中にも仕事の話をする真面目な一面あり。
+                                        </li>
+                                        <li>
+                                            実習生に対しても分け隔てなく接してくれる。提案に対しては真摯に耳を傾け、経験談をふまえた的確な意見を返してくれます。
+                                        </li>
+                                        <li>
+                                            たまに本音がポロっと出る。
+                                        </li>
+                                        <li>
+                                            愛妻家。
+                                        </li>
+                                        <li>
+                                            口癖「○○的の考えだと」
+                                        </li>
+                                    </ul>
                                 </div>
                             </div>
                             <div class="col">
@@ -402,8 +428,14 @@
                 </div>
             </div>
         </section>
-    </div>
 
+        <!-- thankyou -->
+        <section class="d-flex vh-100 justify-content-center align-items-center">
+            <div class="display-3">
+                ご清聴ありがとうございました
+            </div>
+        </section>
+    </div>
 
     <!-- jQueryのコード -->
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"

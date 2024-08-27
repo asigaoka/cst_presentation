@@ -26,5 +26,22 @@
 }
 
 .scroll-container::-webkit-scrollbar {
-    display: none; /* スクロールバーを非表示にする */
+    display: none;
+    /* スクロールバーを非表示にする */
+}
+
+.video-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+    
+    /* 背景のぼかし */
+    filter: blur(0px);
+    
+    /* 背景の透明度 */
+    opacity: 0.25;
 }
